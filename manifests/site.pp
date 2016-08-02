@@ -38,12 +38,12 @@ ini_setting { 'random ordering':
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-file { '/etc/motd':
-  ensure  => file,
-  owner   => 'root',
-  group   => 'root',
-  mode    => '0644',
-  content => "managing resources through puppet is fun",
+#file { '/etc/motd':
+#  ensure  => file,
+#  owner   => 'root',
+#  group   => 'root',
+#  mode    => '0644',
+# content => "managing resources through puppet is fun",
 }
 
 node default {
@@ -57,4 +57,9 @@ node default {
 package {'cowsay' :
 ensure => present,
 provider => gem,
+}
+
+exec { "cowsay 'Welcome to ${::fqdn}! > /etc/motd
+  path    => '/usr/bin',
+  create => '/etc/motd',
 }
