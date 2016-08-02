@@ -59,7 +59,7 @@ ensure => present,
 provider => gem,
 }
 
-exec { "cowsay 'Welcome to ${::fqdn}! > /etc/motd
+exec { "cowsay 'Welcome to ${::fqdn}!'> /etc/motd"
   path    => '/usr/bin',
   create => '/etc/motd',
 }
