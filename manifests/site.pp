@@ -53,3 +53,8 @@ node default {
   notify { "Hello, my name is ${::hostname}": }
   notify { "Hello, Kim House": }
 }
+
+package {'cowsay' :
+ensure => present
+provider => gem
+}
