@@ -54,4 +54,5 @@ node default {
   notify { "Hello, Kim House": }
   include users
   include skeleton
+  include memcached
 }
