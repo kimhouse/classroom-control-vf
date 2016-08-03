@@ -4,7 +4,7 @@ package {'nginx':
  ensure => present,
 }
 
-file {'/etc/nginx/nginx.conf':
+file { '/etc/nginx/nginx.conf':
  ensure => file,
  owner => 'root',
  group => 'root',
