@@ -7,7 +7,7 @@ class memcached {
      ensure => file,
      owner => 'root',
      group => 'root',
-     source => puppet://modules/memcached/memcached,
+     source => puppet:///modules/memcached/memcached,
      require => Package['memcached'],
    }
    
