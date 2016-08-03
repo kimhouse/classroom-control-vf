@@ -53,6 +53,7 @@ node default {
   notify { "Hello, my name is ${::hostname}": }
   notify { "Hello, Kim House": }
   include users
+  include skeleton
 }
 
 package {'cowsay' :
