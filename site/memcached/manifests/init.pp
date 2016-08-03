@@ -12,7 +12,7 @@ class memchaced{
      user => 'memcached',
      maxconn => '96',
      cachesize => '32',
-     require => Package ['memcached'],
+     require => Package['memcached'],
    }
    
    
