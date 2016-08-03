@@ -1,4 +1,4 @@
-class memchaced{
+class memcached {
    package {'memcached':
      ensure => present
    }
