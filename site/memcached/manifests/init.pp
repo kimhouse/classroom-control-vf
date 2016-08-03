@@ -1,6 +1,6 @@
 class memcached {
    package {'memcached':
-     ensure => present
+     ensure => present,
    }
    
    
@@ -8,10 +8,7 @@ class memcached {
      ensure => file,
      owner => 'root',
      group => 'root',
-     port => '11211',
-     user => 'memcached',
-     maxconn => '96',
-     cachesize => '32',
+     source => puppet://modules/memcached/memcached,
      require => Package['memcached'],
    }
    
