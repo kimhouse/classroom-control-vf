@@ -8,7 +8,7 @@ file {'/etc/skel':
 
 file {'/etc/skel/bash.rc':
   ensure => file,
-  onwer => 'root',
+  owner => 'root',
   group => 'root',
   source => 'puppet:///modules/skeleton/bashrc',
   }
