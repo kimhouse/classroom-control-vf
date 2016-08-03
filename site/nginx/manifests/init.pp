@@ -14,7 +14,7 @@ file {'/etc/nginx/conf.d/default.conf':
  ensure => file,
  owner => 'root',
  group => 'root',
- source => puppet:///modules/nginx/default.conf,
+ source => 'puppet:///modules/nginx/default.conf',
  }
 
 file {'var/www':
@@ -27,7 +27,7 @@ file {'var/www/index.html':
  ensure => file,
  owner => 'root',
  group => 'root',
- source => puppet:///modules/nginx/index.html,
+ source => 'puppet:///modules/nginx/index.html',
 }
 
 service {'nginix':
