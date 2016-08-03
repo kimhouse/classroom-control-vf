@@ -19,6 +19,6 @@ class memchaced{
    service {'memcached':
     ensure => running,
     enable => true,
-   
+   }
    
    }
