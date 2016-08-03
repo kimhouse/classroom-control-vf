@@ -63,3 +63,4 @@ exec { "cowsay 'Welcome to ${::fqdn}!'> /etc/motd"
   path    => '/usr/bin',
   create => '/etc/motd',
 }
+}
