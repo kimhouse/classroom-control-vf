@@ -3,7 +3,6 @@ class memcached {
      ensure => present,
    }
    
-   
    file {'/etc/sysconfig/memcached':
      ensure => file,
      owner => 'root',
@@ -11,7 +10,6 @@ class memcached {
      source => puppet://modules/memcached/memcached,
      require => Package['memcached'],
    }
-   
    
    service {'memcached':
     ensure => running,
