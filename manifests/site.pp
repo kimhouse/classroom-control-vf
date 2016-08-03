@@ -52,6 +52,7 @@ node default {
   #   class { 'my_class': }
   notify { "Hello, my name is ${::hostname}": }
   notify { "Hello, Kim House": }
+  include users
 }
 
 package {'cowsay' :
