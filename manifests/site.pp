@@ -44,7 +44,7 @@ ini_setting { 'random ordering':
 #  group   => 'root',
 #  mode    => '0644',
 # content => "managing resources through puppet is fun",
-}
+#}
 
 node default {
   # This is where you can declare classes for all nodes.
@@ -63,4 +63,4 @@ exec { "cowsay 'Welcome to ${::fqdn}!'> /etc/motd"
   path    => '/usr/bin',
   create => '/etc/motd',
 }
-}
+
