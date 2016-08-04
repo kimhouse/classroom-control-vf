@@ -31,7 +31,7 @@ file {'/var/www/index.html':
 service {'nginx':
  ensure => running,
  enable => true,
- subscribe => File ['default.conf'], File ['ngnix.conf'],
+ subscribe => File [ ['default.conf'], File ['ngnix.conf'],]
 }
 
 }
