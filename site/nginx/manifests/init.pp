@@ -7,6 +7,7 @@ File {
  owner => 'root',
  group => 'root',
  mode  => '0644',
+ }
 
 file {'/var/www/':
  ensure => directory,
