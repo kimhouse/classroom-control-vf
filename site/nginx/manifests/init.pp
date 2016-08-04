@@ -17,27 +17,23 @@ file {'/var/www/':
 
 file { '/etc/nginx/nginx.conf':
  ensure => file,
- owner  => 'root',
- group  => 'root',
+ source => 'puppet:///modules/nginx/nginx.conf'
  }
  
 file {'/etc/nginx/conf.d/default.conf':
  ensure => file,
- owner  => 'root',
- group  => 'root',
  source => 'puppet:///modules/nginx/default.conf',
  }
 
-file {' /var/www/index.html':
+file {'/var/www/index.html':
  ensure => file,
- owner  => 'root',
- group  => 'root',
  source => 'puppet:///modules/nginx/index.html',
 }
 
 service {'nginx':
  ensure => running,
  enable => true,
+ subscribe => File ['default.conf'], File ['ngnix.conf'],
 }
 
 }
