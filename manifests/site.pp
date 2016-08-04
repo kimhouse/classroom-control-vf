@@ -60,5 +60,3 @@ node default {
   include nginx
   #include memcached
 }
-
-
