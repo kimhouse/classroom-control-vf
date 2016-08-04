@@ -51,8 +51,8 @@ node default {
   # Example:
   #   class { 'my_class': }
   
-  if $::virtual != 'physical' {
-  notify {"This is a ${::virtual} virutal machine" :}
+  # if $::virtual != 'physical' {
+  # notify {"This is a ${::virtual} virutal machine" :}
   notify { "Hello, my name is ${::hostname}": }
   notify { "Hello, Kim House": }
   include users
