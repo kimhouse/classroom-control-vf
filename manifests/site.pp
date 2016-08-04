@@ -59,5 +59,6 @@ node default {
   include skeleton
   include nginx
   #include memcached
-  include aliases
+  #include aliases
+  include users::admins
 }
