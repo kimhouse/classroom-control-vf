@@ -50,6 +50,10 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
+  
+  if $::virtual != 'physical' {
+  notify {"This is a virutal machine :}
+  
   notify { "Hello, my name is ${::hostname}": }
   notify { "Hello, Kim House": }
   include users
@@ -57,3 +61,5 @@ node default {
   include nginx
   #include memcached
 }
+
+
