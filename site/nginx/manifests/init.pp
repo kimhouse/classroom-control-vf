@@ -11,13 +11,11 @@ File {
 
 file {'/var/www/':
  ensure => directory,
- owner  => 'root',
- group  => 'root',
 }
 
 file { '/etc/nginx/nginx.conf':
  ensure => file,
- source => 'puppet:///modules/nginx/nginx.conf'
+ source => 'puppet:///modules/nginx/nginx.conf',
  }
  
 file {'/etc/nginx/conf.d/default.conf':
