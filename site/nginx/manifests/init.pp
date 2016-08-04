@@ -4,7 +4,7 @@ package {'nginx':
  ensure => present,
 }
 
-file {'var/www/':
+file {'/var/www/':
  ensure => directory,
  owner  => 'root',
  group  => 'root',
