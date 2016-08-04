@@ -2,7 +2,7 @@ define users::managed_users (
  $group = $title,
 ) {
  
- user { $title
+ user { $title:
   ensure => present,
  }
  
